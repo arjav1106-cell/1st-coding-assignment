@@ -54,7 +54,7 @@ s = (x_train.dtypes == 'object')
 object_cols = list(s[s].index)
 
 # starting with One Hot Encoding
-OH_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)
+OH_encoder = OneHotEncoder(handle_unknown='ignore', sparse_output=False)
 OH_cols_train = pd.DataFrame(OH_encoder.fit_transform(x_train[object_cols]))
 OH_cols_valid = pd.DataFrame(OH_encoder.transform(x_val[object_cols]))
 
