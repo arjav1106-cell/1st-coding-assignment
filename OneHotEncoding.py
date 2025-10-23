@@ -9,7 +9,7 @@ def OHEncoder(data,columns):
     for column in columns:
         categories = new_data[column].unique()
         for cat in categories:
-            new_data[column + cat] = (new_data[column] == cat).astype(int)
+            new_data[column + '_' +cat] = (new_data[column] == cat).astype(int)
         new_data.drop([column], inplace=True, axis=1)
     return new_data
 

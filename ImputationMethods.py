@@ -1,7 +1,6 @@
 import pandas as pd
 
 data = pd.read_csv(r'C:\Git programs\AIMS\1st-coding-assignment\data.csv')
-# print(data.isnull().sum())
 
 # removing the columns that have any missing data
 def remove_col_with_missing(data):
@@ -62,7 +61,6 @@ def imputing_bfill_obj(data):
     for col in object_cols:
         new_data[col] = data[col].fillna(method='bfill')
     return new_data
-
 # note:- backward filling will not be helpful in this case since the last row of an object column has a missing value so it will be left as NaN
 
 # imputing the missing values with the mode of the column

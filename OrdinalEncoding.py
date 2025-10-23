@@ -24,6 +24,7 @@ Product_Quality_Rating_order_map = {"High":3,"Medium":2,"Low":1}
 new_data['Month'] = new_data['Month'].map(month_order_map)
 new_data['Online_Promotion'] = new_data['Online_Promotion'].map(Online_Promotion_order_map)
 new_data['Product_Quality_Rating'] = new_data['Product_Quality_Rating'].map(Product_Quality_Rating_order_map)
+# We can also use the '.replace()' function for this data
 
 print(new_data)
 
