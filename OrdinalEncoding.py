@@ -18,7 +18,7 @@ month_order_map = {
     "Nov": 11,
     "Dec": 12
 }
-Online_Promotion_order_map = {"Yes":1, "No":2}
+Online_Promotion_order_map = {"Yes":1, "No":0}
 Product_Quality_Rating_order_map = {"High":3,"Medium":2,"Low":1}
 
 new_data['Month'] = new_data['Month'].map(month_order_map)
