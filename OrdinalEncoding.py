@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = pd.read_csv(r"C:\Git programs\AIMS\1st-coding-assignment\new_data.csv")
+data = pd.read_csv(r"C:\Git programs\AIMS\1st-coding-assignment\ImputedData.csv")
 new_data = data.copy()
 # USING THE MAP FUNCTION
 # columns to ordinal encode are ['Month','Online_Promotion','Product_Quality_Rating']
