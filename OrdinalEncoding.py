@@ -26,3 +26,14 @@ new_data['Online_Promotion'] = new_data['Online_Promotion'].map(Online_Promotion
 new_data['Product_Quality_Rating'] = new_data['Product_Quality_Rating'].map(Product_Quality_Rating_order_map)
 
 print(new_data)
+
+# USING LOOP METHOD
+# enter the data, order_map of the column that we want to encode and the column name of the column
+def loop_method(data,order_map,column_name):
+    new_data = data.copy()
+    encoded_value = []
+    for value in new_data[column_name]:
+        code = order_map.get(value, None)
+        encoded_value.append(code)
+    new_data[column_name] = encoded_value
+    return new_data
