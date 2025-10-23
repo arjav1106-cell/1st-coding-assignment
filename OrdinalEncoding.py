@@ -1,0 +1,28 @@
+import pandas as pd
+
+data = pd.read_csv(r"C:\Git programs\AIMS\1st-coding-assignment\new_data.csv")
+new_data = data.copy()
+# USING THE MAP FUNCTION
+# columns to ordinal encode are ['Month','Online_Promotion','Product_Quality_Rating']
+month_order_map = {
+    "Jan": 1,
+    "Feb": 2,
+    "Mar": 3,
+    "Apr": 4,
+    "May": 5,
+    "Jun": 6,
+    "Jul": 7,
+    "Aug": 8,
+    "Sep": 9,
+    "Oct": 10,
+    "Nov": 11,
+    "Dec": 12
+}
+Online_Promotion_order_map = {"Yes":1, "No":2}
+Product_Quality_Rating_order_map = {"High":3,"Medium":2,"Low":1}
+
+new_data['Month'] = new_data['Month'].map(month_order_map)
+new_data['Online_Promotion'] = new_data['Online_Promotion'].map(Online_Promotion_order_map)
+new_data['Product_Quality_Rating'] = new_data['Product_Quality_Rating'].map(Product_Quality_Rating_order_map)
+
+print(new_data)
